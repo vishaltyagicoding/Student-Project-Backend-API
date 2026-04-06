@@ -1,0 +1,914 @@
+INFO 2026-03-25 09:44:08,304 autoreload Watching for file changes with StatReloader
+INFO 2026-03-25 09:44:15,346 middleware GET / - Status: 404 - Duration: 0.31s - User: Anonymous
+WARNING 2026-03-25 09:44:15,346 log Not Found: /
+INFO 2026-03-25 09:44:15,535 middleware GET /favicon.ico - Status: 404 - Duration: 0.02s - User: Anonymous
+WARNING 2026-03-25 09:44:15,535 log Not Found: /favicon.ico
+INFO 2026-03-25 09:44:29,737 middleware GET /admin - Status: 404 - Duration: 0.01s - User: Anonymous
+INFO 2026-03-25 09:44:29,774 middleware GET /admin/ - Status: 302 - Duration: 0.03s - User: Anonymous
+INFO 2026-03-25 09:44:30,014 middleware GET /admin/login/ - Status: 200 - Duration: 0.23s - User: Anonymous
+INFO 2026-03-25 09:44:43,591 middleware POST /admin/login/ - Status: 302 - Duration: 1.01s - User: alberttyagi123@gmail.com
+INFO 2026-03-25 09:44:43,743 middleware GET /admin/ - Status: 200 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-25 09:47:51,963 autoreload D:\Student_Project\backend\apps\accounts\models.py changed, reloading.
+INFO 2026-03-25 09:47:54,628 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 09:38:26,246 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 09:38:32,886 middleware GET / - Status: 404 - Duration: 0.43s - User: alberttyagi123@gmail.com
+WARNING 2026-03-28 09:38:32,886 log Not Found: /
+INFO 2026-03-28 09:38:33,176 middleware GET /favicon.ico - Status: 404 - Duration: 0.02s - User: alberttyagi123@gmail.com
+WARNING 2026-03-28 09:38:33,176 log Not Found: /favicon.ico
+INFO 2026-03-28 09:38:44,345 middleware GET /api/auth/logout/ - Status: 401 - Duration: 0.13s - User: Anonymous
+WARNING 2026-03-28 09:38:44,345 log Unauthorized: /api/auth/logout/
+INFO 2026-03-28 09:38:52,285 middleware GET /api/auth/login/ - Status: 405 - Duration: 0.19s - User: Anonymous
+WARNING 2026-03-28 09:38:52,285 log Method Not Allowed: /api/auth/login/
+INFO 2026-03-28 09:39:03,066 middleware GET /api/auth/register/ - Status: 405 - Duration: 0.05s - User: Anonymous
+WARNING 2026-03-28 09:39:03,066 log Method Not Allowed: /api/auth/register/
+INFO 2026-03-28 09:40:05,246 middleware GET /api/auth/verify-otp/ - Status: 405 - Duration: 0.01s - User: Anonymous
+WARNING 2026-03-28 09:40:05,254 log Method Not Allowed: /api/auth/verify-otp/
+INFO 2026-03-28 09:42:36,030 middleware GET /api/auth/'resend-otp/ - Status: 404 - Duration: 0.03s - User: alberttyagi123@gmail.com
+WARNING 2026-03-28 09:42:36,030 log Not Found: /api/auth/'resend-otp/
+INFO 2026-03-28 09:42:58,856 middleware GET /api/auth/resend-otp/ - Status: 405 - Duration: 0.01s - User: Anonymous
+WARNING 2026-03-28 09:42:58,856 log Method Not Allowed: /api/auth/resend-otp/
+INFO 2026-03-28 09:43:34,356 middleware POST /api/auth/resend-otp/ - Status: 404 - Duration: 0.08s - User: Anonymous
+WARNING 2026-03-28 09:43:34,356 log Not Found: /api/auth/resend-otp/
+INFO 2026-03-28 09:43:55,021 middleware GET /api/auth/resend-otp/ - Status: 405 - Duration: 0.01s - User: Anonymous
+WARNING 2026-03-28 09:43:55,021 log Method Not Allowed: /api/auth/resend-otp/
+INFO 2026-03-28 09:44:21,616 middleware POST /api/auth/resend-otp/ - Status: 404 - Duration: 0.08s - User: Anonymous
+WARNING 2026-03-28 09:44:21,616 log Not Found: /api/auth/resend-otp/
+INFO 2026-03-28 09:44:34,501 middleware GET /api/auth/register/ - Status: 405 - Duration: 0.02s - User: Anonymous
+WARNING 2026-03-28 09:44:34,501 log Method Not Allowed: /api/auth/register/
+INFO 2026-03-28 09:44:50,665 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.14s - User: Anonymous
+WARNING 2026-03-28 09:44:50,665 log Bad Request: /api/auth/register/
+ERROR 2026-03-28 09:45:04,785 log Internal Server Error: /api/auth/register/
+Traceback (most recent call last):
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "otp_verifications" does not exist
+LINE 1: UPDATE "otp_verifications" SET "is_used" = true WHERE (NOT "...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Student_Project\backend\apps\accounts\views.py", line 63, in create
+    otp_obj = OTPVerification.generate_otp(user)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Student_Project\backend\apps\accounts\models.py", line 78, in generate_otp
+    cls.objects.filter(user=user, is_used=False).update(is_used=True)
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\models\query.py", line 1206, in update
+    rows = query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\models\sql\compiler.py", line 1984, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "otp_verifications" does not exist
+LINE 1: UPDATE "otp_verifications" SET "is_used" = true WHERE (NOT "...
+               ^
+
+INFO 2026-03-28 09:45:04,876 middleware POST /api/auth/register/ - Status: 500 - Duration: 1.45s - User: Anonymous
+INFO 2026-03-28 09:46:34,946 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 09:46:41,253 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.17s - User: Anonymous
+WARNING 2026-03-28 09:46:41,254 log Bad Request: /api/auth/register/
+INFO 2026-03-28 09:46:56,576 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.10s - User: Anonymous
+WARNING 2026-03-28 09:46:56,576 log Bad Request: /api/auth/register/
+INFO 2026-03-28 09:47:16,505 middleware GET /admin - Status: 404 - Duration: 0.03s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:17,036 middleware GET /admin/ - Status: 200 - Duration: 0.52s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:19,686 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.27s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:19,965 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:32,326 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.19s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:33,866 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:33,986 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:47:34,126 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+ERROR 2026-03-28 09:48:00,049 log Internal Server Error: /api/auth/register/
+Traceback (most recent call last):
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Roaming\Python\Python311\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Student_Project\backend\apps\accounts\views.py", line 64, in create
+    send_mail(
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\mail\__init__.py", line 87, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\mail\backends\smtp.py", line 134, in send_messages
+    sent = self._send(message)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\site-packages\django\core\mail\backends\smtp.py", line 152, in _send
+    self.connection.sendmail(
+  File "C:\Users\alber\.pyenv\pyenv-win\versions\3.11.7\Lib\smtplib.py", line 887, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. d2e1a72fcca58-82ca8625269sm872307b3a.53 - gsmtp', 'alberttyagi123@gmail.com')
+INFO 2026-03-28 09:48:00,076 middleware POST /api/auth/register/ - Status: 500 - Duration: 3.50s - User: Anonymous
+INFO 2026-03-28 09:53:34,465 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 09:53:48,424 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.16s - User: Anonymous
+WARNING 2026-03-28 09:53:48,424 log Bad Request: /api/auth/register/
+INFO 2026-03-28 09:53:52,725 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.18s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:53:52,899 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:53:59,380 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:54:00,805 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:54:00,917 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:54:01,055 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:54:13,235 middleware POST /api/auth/register/ - Status: 201 - Duration: 4.93s - User: Anonymous
+INFO 2026-03-28 09:56:05,165 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:56:05,327 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 09:59:29,610 middleware GET /api/auth/verify-otp/ - Status: 405 - Duration: 0.01s - User: Anonymous
+WARNING 2026-03-28 09:59:29,610 log Method Not Allowed: /api/auth/verify-otp/
+INFO 2026-03-28 10:00:19,595 middleware POST /api/auth/verify-otp/ - Status: 200 - Duration: 0.14s - User: Anonymous
+INFO 2026-03-28 10:00:29,980 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 10:00:30,147 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:29:31,494 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 18:29:35,121 middleware GET / - Status: 404 - Duration: 0.05s - User: alberttyagi123@gmail.com
+WARNING 2026-03-28 18:29:35,121 log Not Found: /
+INFO 2026-03-28 18:37:15,787 autoreload D:\Student_Project\backend\config\urls.py changed, reloading.
+INFO 2026-03-28 18:37:18,107 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 18:39:11,841 middleware GET / - Status: 200 - Duration: 0.01s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:45:08,847 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.11s - User: Anonymous
+WARNING 2026-03-28 18:45:08,847 log Bad Request: /api/auth/register/
+INFO 2026-03-28 18:51:11,274 middleware POST /api/auth/register/ - Status: 201 - Duration: 1.20s - User: Anonymous
+INFO 2026-03-28 18:58:13,950 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.08s - User: Anonymous
+WARNING 2026-03-28 18:58:13,950 log Bad Request: /api/auth/register/
+INFO 2026-03-28 18:58:33,326 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.22s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:58:34,847 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:58:35,026 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:58:35,198 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:08,762 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:09,962 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:10,087 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:10,230 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:17,065 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.08s - User: Anonymous
+WARNING 2026-03-28 18:59:17,065 log Bad Request: /api/auth/register/
+INFO 2026-03-28 18:59:35,040 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 18:59:35,181 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:00:16,112 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 19:03:36,781 middleware POST /api/auth/register/ - Status: 400 - Duration: 0.10s - User: Anonymous
+WARNING 2026-03-28 19:03:36,781 log Bad Request: /api/auth/register/
+INFO 2026-03-28 19:03:47,205 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.19s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:03:47,344 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:03:48,143 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:03:48,338 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:04:07,904 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:04:09,369 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:04:09,480 middleware GET /admin/accounts/customuser/ - Status: 302 - Duration: 0.09s - User: Anonymous
+INFO 2026-03-28 19:04:09,618 middleware GET /admin/login/ - Status: 200 - Duration: 0.13s - User: Anonymous
+INFO 2026-03-28 19:04:19,820 middleware POST /api/auth/register/ - Status: 201 - Duration: 1.06s - User: Anonymous
+INFO 2026-03-28 19:05:53,927 middleware POST /admin/login/ - Status: 200 - Duration: 1.22s - User: Anonymous
+INFO 2026-03-28 19:08:08,855 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 19:08:14,407 middleware POST /admin/login/ - Status: 302 - Duration: 1.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:14,637 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.21s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:14,835 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:36,202 middleware POST /admin/accounts/customuser/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:37,391 middleware POST /admin/accounts/customuser/ - Status: 302 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:37,510 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:37,665 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:46,932 middleware POST /api/auth/register/ - Status: 201 - Duration: 1.11s - User: Anonymous
+INFO 2026-03-28 19:08:55,184 middleware GET /admin/accounts/customuser/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:08:55,356 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-28 19:15:51,693 middleware POST /api/auth/verift-otp/ - Status: 404 - Duration: 0.04s - User: Anonymous
+WARNING 2026-03-28 19:15:51,694 log Not Found: /api/auth/verift-otp/
+INFO 2026-03-28 19:16:58,719 middleware POST /api/auth/verify-otp// - Status: 404 - Duration: 0.02s - User: Anonymous
+WARNING 2026-03-28 19:16:58,719 log Not Found: /api/auth/verify-otp//
+INFO 2026-03-28 19:17:12,847 middleware POST /api/auth/verify-otp/ - Status: 200 - Duration: 0.16s - User: Anonymous
+INFO 2026-03-28 19:20:39,253 autoreload D:\Student_Project\backend\apps\accounts\views.py changed, reloading.
+INFO 2026-03-28 19:20:42,615 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 19:20:46,281 autoreload D:\Student_Project\backend\apps\accounts\views.py changed, reloading.
+INFO 2026-03-28 19:20:49,753 autoreload Watching for file changes with StatReloader
+INFO 2026-03-28 19:21:31,103 middleware POST /api/auth/login/ - Status: 200 - Duration: 1.41s - User: Anonymous
+INFO 2026-03-29 12:07:18,172 autoreload Watching for file changes with StatReloader
+INFO 2026-03-29 12:07:32,548 middleware GET / - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:07:34,233 middleware GET /favicon.ico - Status: 404 - Duration: 0.78s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 12:07:34,249 log Not Found: /favicon.ico
+INFO 2026-03-29 12:08:15,970 middleware POST /api/auth/login/ - Status: 200 - Duration: 1.55s - User: Anonymous
+INFO 2026-03-29 12:08:24,817 middleware POST /api/auth/logout/ - Status: 200 - Duration: 0.14s - User: pythonbyvishal@gmail.com
+INFO 2026-03-29 12:08:48,195 middleware GET /api/students/students/ - Status: 200 - Duration: 0.13s - User: pythonbyvishal@gmail.com
+INFO 2026-03-29 12:09:29,423 middleware POST /api/students/students/ - Status: 400 - Duration: 0.15s - User: pythonbyvishal@gmail.com
+WARNING 2026-03-29 12:09:29,423 log Bad Request: /api/students/students/
+INFO 2026-03-29 12:10:06,090 middleware POST /api/students/colleges/ - Status: 403 - Duration: 0.08s - User: pythonbyvishal@gmail.com
+WARNING 2026-03-29 12:10:06,090 log Forbidden: /api/students/colleges/
+INFO 2026-03-29 12:10:59,999 middleware POST /api/auth/login/ - Status: 200 - Duration: 1.18s - User: Anonymous
+INFO 2026-03-29 12:11:11,474 middleware POST /api/students/colleges/ - Status: 201 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:11:33,530 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:11:47,085 middleware POST /api/students/courses/ - Status: 201 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:12:02,512 middleware POST /api/students/students/ - Status: 400 - Duration: 0.12s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 12:12:02,512 log Bad Request: /api/students/students/
+INFO 2026-03-29 12:12:45,394 middleware POST /api/students/students/ - Status: 400 - Duration: 0.17s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 12:12:45,399 log Bad Request: /api/students/students/
+INFO 2026-03-29 12:13:24,659 middleware GET /admin - Status: 404 - Duration: 0.02s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:24,974 middleware GET /admin/ - Status: 200 - Duration: 0.26s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:27,806 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.23s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:27,996 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:31,503 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.23s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:31,649 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:33,521 middleware GET /admin/students/college/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:33,664 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:35,653 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:35,810 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:37,348 middleware GET /admin/students/collegebranch/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:37,497 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:41,969 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:42,142 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:50,157 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.27s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:50,417 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:55,984 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:13:59,154 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:01,086 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:03,315 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:04,936 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:12,857 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:13,005 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:22,374 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:22,518 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:24,557 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:24,807 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.18s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:27,562 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:34,393 middleware GET /admin/students/college/add/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:34,539 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:41,870 middleware GET /admin/students/college/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:42,035 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:45,901 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:46,051 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:48,599 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:48,808 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:55,681 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:55,827 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:59,065 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:14:59,210 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:15:07,093 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:15:09,319 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:15:29,755 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:15:36,755 middleware GET /admin/students/course/add/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:15:37,004 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.19s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:01,649 middleware POST /api/students/courses/ - Status: 201 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:05,506 middleware GET /admin/students/course/add/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:05,670 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:08,947 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:09,104 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:10,813 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:10,970 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:12,610 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:17:14,313 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:21:04,202 middleware GET /admin/autocomplete/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:21:21,183 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:21:21,349 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:22:56,371 autoreload D:\Student_Project\backend\apps\students\admin.py changed, reloading.
+INFO 2026-03-29 12:22:59,012 autoreload Watching for file changes with StatReloader
+INFO 2026-03-29 12:24:31,868 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.30s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:32,034 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:39,365 signals College-Branch relationship created: Example College - Computer Science
+INFO 2026-03-29 12:24:39,375 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:39,548 middleware GET /admin/students/collegebranch/ - Status: 200 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:39,682 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:41,665 middleware GET /admin/students/collegecourse/add/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:41,831 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:46,486 signals College-Course relationship created: Example College - Bachelor of Enginnering
+INFO 2026-03-29 12:24:46,491 middleware POST /admin/students/collegecourse/add/ - Status: 302 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:46,636 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:46,779 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:49,036 middleware GET /admin/students/collegecourse/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:49,194 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:54,318 signals College-Course relationship created: Example College - Bachelor of Technology
+INFO 2026-03-29 12:24:54,364 middleware POST /admin/students/collegecourse/add/ - Status: 302 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:54,492 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:54,627 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:58,193 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:24:58,347 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:25:14,356 signals New student created: STU001 - john.doe@example.com
+INFO 2026-03-29 12:25:14,527 signals Registration email task queued for john.doe@example.com
+INFO 2026-03-29 12:25:14,546 middleware POST /api/students/students/ - Status: 201 - Duration: 0.41s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:28:25,437 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:28:50,521 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:29:02,344 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:29:18,342 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:29:30,979 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:29:46,314 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:30:20,914 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:30:49,715 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:19,244 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:19,395 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:22,993 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:23,150 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:31,725 middleware POST /admin/students/course/ - Status: 200 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:33,014 middleware POST /admin/students/course/ - Status: 302 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:33,145 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:33,307 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:42,646 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:42,793 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:47,797 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:32:47,955 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:07,881 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:08,038 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:16,262 middleware GET /admin/students/college/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:16,436 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:18,213 middleware GET /admin/students/college/add/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:33:18,367 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:35:53,290 middleware POST /admin/students/college/add/ - Status: 302 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:35:53,413 middleware GET /admin/students/college/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:35:53,657 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:05,719 middleware POST /admin/students/college/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:06,918 middleware POST /admin/students/college/ - Status: 302 - Duration: 0.19s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:07,136 middleware GET /admin/students/college/ - Status: 200 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:07,284 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:09,424 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:09,576 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:14,516 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:14,685 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:25,865 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:26,018 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:34,362 signals College-Branch relationship created: Technocrats Institute of Technology - Agricultural Engineering
+INFO 2026-03-29 12:36:34,421 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:34,551 middleware GET /admin/students/collegebranch/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:34,712 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:40,060 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:40,211 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:45,510 signals College-Branch relationship created: Technocrats Institute of Technology - Biotechnology Engineering
+INFO 2026-03-29 12:36:45,565 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:45,691 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:45,861 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:49,891 signals College-Branch relationship created: Technocrats Institute of Technology - Chemical Engineering
+INFO 2026-03-29 12:36:49,906 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:50,026 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:50,191 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:54,656 signals College-Branch relationship created: Technocrats Institute of Technology - Civil Engineering
+INFO 2026-03-29 12:36:54,672 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:54,791 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:54,941 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:59,020 signals College-Branch relationship created: Technocrats Institute of Technology - Computer Science
+INFO 2026-03-29 12:36:59,028 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:59,162 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:36:59,305 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:05,227 signals College-Branch relationship created: Technocrats Institute of Technology - Electrical and Electronics Engineering
+INFO 2026-03-29 12:37:05,275 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:05,405 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:05,558 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:12,376 middleware POST /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:12,544 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:16,451 signals College-Branch relationship created: Technocrats Institute of Technology - Electronics and Communication Engineering
+INFO 2026-03-29 12:37:16,459 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:16,591 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:16,750 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:22,181 signals College-Branch relationship created: Technocrats Institute of Technology - Information Technology
+INFO 2026-03-29 12:37:22,229 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:22,497 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:22,650 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:27,438 signals College-Branch relationship created: Technocrats Institute of Technology - Mechanical Engineering
+INFO 2026-03-29 12:37:27,448 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:27,582 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:37:27,832 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.18s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:38:31,338 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:38:44,901 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:39:00,816 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:39:16,163 middleware POST /api/students/branches/ - Status: 201 - Duration: 0.16s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:39:31,358 middleware POST /api/students/branches/ - Status: 400 - Duration: 0.14s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 12:39:31,358 log Bad Request: /api/students/branches/
+INFO 2026-03-29 12:39:56,242 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:39:56,393 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:07,407 signals College-Branch relationship created: Technocrats Institute of Technology - Computer Science and Engineering (Artificial Intelligence)
+INFO 2026-03-29 12:40:07,416 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:07,555 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:07,708 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:15,512 signals College-Branch relationship created: Technocrats Institute of Technology - Computer Science and Engineering (Data Science)
+INFO 2026-03-29 12:40:15,556 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:15,677 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:15,819 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:20,436 middleware POST /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:20,593 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:28,799 signals College-Branch relationship created: Technocrats Institute of Technology - Artificial Intelligence and Machine Learning
+INFO 2026-03-29 12:40:28,807 middleware POST /admin/students/collegebranch/add/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:29,034 middleware GET /admin/students/collegebranch/add/ - Status: 200 - Duration: 0.21s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:29,188 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:37,698 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.18s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:37,863 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:47,719 middleware GET /admin/students/collegecourse/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:47,882 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:51,118 signals College-Course relationship created: Technocrats Institute of Technology - Bachelor of Technology
+INFO 2026-03-29 12:40:51,163 middleware POST /admin/students/collegecourse/add/ - Status: 302 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:51,279 middleware GET /admin/students/collegecourse/add/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:51,445 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:54,617 middleware GET /admin/students/student/add/ - Status: 200 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:40:54,766 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:41:51,079 signals New student created: STU201023AI59 - alberttyagi123@gmail.com
+INFO 2026-03-29 12:41:51,108 signals Registration email task queued for alberttyagi123@gmail.com
+INFO 2026-03-29 12:41:51,157 middleware POST /admin/students/student/add/ - Status: 302 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:41:51,278 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:41:51,444 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:43:43,850 autoreload D:\Student_Project\backend\apps\students\views.py changed, reloading.
+INFO 2026-03-29 12:43:46,306 autoreload Watching for file changes with StatReloader
+INFO 2026-03-29 12:45:22,231 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.36s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:45:22,924 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.52s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:45:26,830 middleware GET /admin/students/collegebranch/ - Status: 200 - Duration: 0.21s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:45:27,021 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:46:18,741 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:46:18,903 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:55:29,881 middleware GET /admin/students/student/2/change/ - Status: 200 - Duration: 0.23s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:55:30,165 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 12:55:35,148 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:03:40,520 middleware GET /api/students/students/ - Status: 401 - Duration: 0.00s - User: Anonymous
+WARNING 2026-03-29 13:03:40,528 log Unauthorized: /api/students/students/
+INFO 2026-03-29 13:04:23,103 middleware POST /api/auth/login/ - Status: 200 - Duration: 1.20s - User: Anonymous
+INFO 2026-03-29 13:04:38,455 middleware GET /api/students/students/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:05:26,733 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.72s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:05:26,733 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:06:41,458 middleware GET /api/students/students/1/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:06:47,463 middleware GET /api/students/students/ - Status: 200 - Duration: 0.14s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:08:08,808 middleware GET /api/students/colleges/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:10:53,518 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.74s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:10:53,518 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:11:42,768 middleware GET /api/students/courses/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:15:13,091 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:15:13,248 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:15:18,039 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:15:18,207 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:08,994 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:09,161 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:11,026 middleware GET /admin/students/collegecourse/3/change/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:11,188 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:15,010 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:15,169 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:16,792 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:18:16,949 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:19:46,235 middleware GET /api/students/branches/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:34,920 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.13s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:35,249 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.25s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:37,331 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:37,503 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:39,904 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:40,072 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:45,853 middleware POST /admin/students/course/1/change/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:46,070 middleware GET /admin/students/course/add/ - Status: 200 - Duration: 0.21s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:46,204 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:58,558 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:20:58,722 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:01,374 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:01,525 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:03,782 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:03,941 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:37,214 middleware POST /admin/students/course/1/change/ - Status: 302 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:37,481 middleware GET /admin/students/course/add/ - Status: 200 - Duration: 0.25s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:37,624 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.07s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:42,546 middleware GET /admin/students/branch/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:42,705 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:45,422 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:45,580 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:47,204 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:21:47,372 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:14,221 middleware GET /admin/students/collegecourse/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:14,385 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:16,346 middleware GET /admin/students/collegecourse/3/change/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:16,496 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:20,553 middleware GET /admin/students/collegebranch/ - Status: 200 - Duration: 0.11s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:20,704 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:26,860 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.12s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:27,010 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:28,944 middleware GET /admin/students/course/1/change/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:29,118 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:31,692 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:31,842 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:36,991 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.10s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:22:37,147 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:27:00,355 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.13s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:27:00,363 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:27:43,478 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.13s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:27:43,478 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:28:02,215 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.10s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:28:02,223 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:28:12,126 middleware POST /api/students/students/bulk_create/ - Status: 400 - Duration: 0.11s - User: alberttyagi123@gmail.com
+WARNING 2026-03-29 13:28:12,130 log Bad Request: /api/students/students/bulk_create/
+INFO 2026-03-29 13:34:55,986 autoreload Watching for file changes with StatReloader
+INFO 2026-03-29 13:35:01,424 signals New student created: STU2026001 - emma.patel7823@tit.in
+INFO 2026-03-29 13:35:01,570 signals Registration email task queued for emma.patel7823@tit.in
+INFO 2026-03-29 13:35:01,631 signals New student created: STU2026002 - aarav.sharma4156@tit.in
+INFO 2026-03-29 13:35:01,634 signals Registration email task queued for aarav.sharma4156@tit.in
+INFO 2026-03-29 13:35:01,642 signals New student created: STU2026003 - priya.khan9301@tit.in
+INFO 2026-03-29 13:35:01,647 signals Registration email task queued for priya.khan9301@tit.in
+INFO 2026-03-29 13:35:01,663 signals New student created: STU2026004 - william.johnson2456@tit.in
+INFO 2026-03-29 13:35:01,666 signals Registration email task queued for william.johnson2456@tit.in
+INFO 2026-03-29 13:35:01,666 signals New student created: STU2026005 - sophia.verma6789@tit.in
+INFO 2026-03-29 13:35:01,680 signals Registration email task queued for sophia.verma6789@tit.in
+INFO 2026-03-29 13:35:01,694 signals New student created: STU2026006 - mohammed.ali1234@tit.in
+INFO 2026-03-29 13:35:01,702 signals Registration email task queued for mohammed.ali1234@tit.in
+INFO 2026-03-29 13:35:01,719 signals New student created: STU2026007 - ananya.singh5678@tit.in
+INFO 2026-03-29 13:35:01,726 signals Registration email task queued for ananya.singh5678@tit.in
+INFO 2026-03-29 13:35:01,743 signals New student created: STU2026008 - daniel.gupta9012@tit.in
+INFO 2026-03-29 13:35:01,746 signals Registration email task queued for daniel.gupta9012@tit.in
+INFO 2026-03-29 13:35:01,761 signals New student created: STU2026009 - fatima.sheikh3456@tit.in
+INFO 2026-03-29 13:35:01,761 signals Registration email task queued for fatima.sheikh3456@tit.in
+INFO 2026-03-29 13:35:01,778 signals New student created: STU2026010 - james.kumar7890@tit.in
+INFO 2026-03-29 13:35:01,786 signals Registration email task queued for james.kumar7890@tit.in
+INFO 2026-03-29 13:35:01,796 signals New student created: STU2026011 - neha.reddy2345@tit.in
+INFO 2026-03-29 13:35:01,804 signals Registration email task queued for neha.reddy2345@tit.in
+INFO 2026-03-29 13:35:01,827 signals New student created: STU2026012 - michael.brown6789@tit.in
+INFO 2026-03-29 13:35:01,827 signals Registration email task queued for michael.brown6789@tit.in
+INFO 2026-03-29 13:35:01,841 signals New student created: STU2026013 - diya.nair1122@tit.in
+INFO 2026-03-29 13:35:01,849 signals Registration email task queued for diya.nair1122@tit.in
+INFO 2026-03-29 13:35:01,863 signals New student created: STU2026014 - david.miller3344@tit.in
+INFO 2026-03-29 13:35:01,870 signals Registration email task queued for david.miller3344@tit.in
+INFO 2026-03-29 13:35:01,886 signals New student created: STU2026015 - ishita.iyengar5566@tit.in
+INFO 2026-03-29 13:35:01,888 signals Registration email task queued for ishita.iyengar5566@tit.in
+INFO 2026-03-29 13:35:01,912 signals New student created: STU2026016 - oliver.wilson7788@tit.in
+INFO 2026-03-29 13:35:01,920 signals Registration email task queued for oliver.wilson7788@tit.in
+INFO 2026-03-29 13:35:01,940 signals New student created: STU2026017 - riya.joshi9900@tit.in
+INFO 2026-03-29 13:35:01,946 signals Registration email task queued for riya.joshi9900@tit.in
+INFO 2026-03-29 13:35:01,966 signals New student created: STU2026018 - arjun.menon1230@tit.in
+INFO 2026-03-29 13:35:01,974 signals Registration email task queued for arjun.menon1230@tit.in
+INFO 2026-03-29 13:35:01,986 signals New student created: STU2026019 - emily.davis4560@tit.in
+INFO 2026-03-29 13:35:01,998 signals Registration email task queued for emily.davis4560@tit.in
+INFO 2026-03-29 13:35:02,014 signals New student created: STU2026020 - kabir.choudhary7890@tit.in
+INFO 2026-03-29 13:35:02,022 signals Registration email task queued for kabir.choudhary7890@tit.in
+INFO 2026-03-29 13:35:02,049 signals New student created: STU2026021 - sofia.garcia1011@tit.in
+INFO 2026-03-29 13:35:02,053 signals Registration email task queued for sofia.garcia1011@tit.in
+INFO 2026-03-29 13:35:02,063 signals New student created: STU2026022 - vihaan.malhotra1213@tit.in
+INFO 2026-03-29 13:35:02,071 signals Registration email task queued for vihaan.malhotra1213@tit.in
+INFO 2026-03-29 13:35:02,086 signals New student created: STU2026023 - sarah.martinez1415@tit.in
+INFO 2026-03-29 13:35:02,092 signals Registration email task queued for sarah.martinez1415@tit.in
+INFO 2026-03-29 13:35:02,109 signals New student created: STU2026024 - kavya.pillai1617@tit.in
+INFO 2026-03-29 13:35:02,109 signals Registration email task queued for kavya.pillai1617@tit.in
+INFO 2026-03-29 13:35:02,127 signals New student created: STU2026025 - benjamin.taylor1819@tit.in
+INFO 2026-03-29 13:35:02,138 signals Registration email task queued for benjamin.taylor1819@tit.in
+INFO 2026-03-29 13:35:02,152 signals New student created: STU2026026 - navya.desai2021@tit.in
+INFO 2026-03-29 13:35:02,159 signals Registration email task queued for navya.desai2021@tit.in
+INFO 2026-03-29 13:35:02,176 signals New student created: STU2026027 - liam.anderson2223@tit.in
+INFO 2026-03-29 13:35:02,184 signals Registration email task queued for liam.anderson2223@tit.in
+INFO 2026-03-29 13:35:02,205 signals New student created: STU2026028 - shreya.banerjee2425@tit.in
+INFO 2026-03-29 13:35:02,210 signals Registration email task queued for shreya.banerjee2425@tit.in
+INFO 2026-03-29 13:35:02,222 signals New student created: STU2026029 - aryan.yadav2627@tit.in
+INFO 2026-03-29 13:35:02,222 signals Registration email task queued for aryan.yadav2627@tit.in
+INFO 2026-03-29 13:35:02,247 signals New student created: STU2026030 - isabella.thomas2829@tit.in
+INFO 2026-03-29 13:35:02,247 signals Registration email task queued for isabella.thomas2829@tit.in
+INFO 2026-03-29 13:35:02,273 signals New student created: STU2026031 - rohan.kapoor3031@tit.in
+INFO 2026-03-29 13:35:02,273 signals Registration email task queued for rohan.kapoor3031@tit.in
+INFO 2026-03-29 13:35:02,286 signals New student created: STU2026032 - chloe.rodriguez3233@tit.in
+INFO 2026-03-29 13:35:02,297 signals Registration email task queued for chloe.rodriguez3233@tit.in
+INFO 2026-03-29 13:35:02,304 signals New student created: STU2026033 - anjali.chatterjee3435@tit.in
+INFO 2026-03-29 13:35:02,316 signals Registration email task queued for anjali.chatterjee3435@tit.in
+INFO 2026-03-29 13:35:02,330 signals New student created: STU2026034 - ethan.jackson3637@tit.in
+INFO 2026-03-29 13:35:02,330 signals Registration email task queued for ethan.jackson3637@tit.in
+INFO 2026-03-29 13:35:02,355 signals New student created: STU2026035 - meera.krishna3839@tit.in
+INFO 2026-03-29 13:35:02,357 signals Registration email task queued for meera.krishna3839@tit.in
+INFO 2026-03-29 13:35:02,372 signals New student created: STU2026036 - mason.white4041@tit.in
+INFO 2026-03-29 13:35:02,414 signals Registration email task queued for mason.white4041@tit.in
+INFO 2026-03-29 13:35:02,434 signals New student created: STU2026037 - tanvi.mehta4243@tit.in
+INFO 2026-03-29 13:35:02,481 signals Registration email task queued for tanvi.mehta4243@tit.in
+INFO 2026-03-29 13:35:02,594 signals New student created: STU2026038 - lucas.harris4445@tit.in
+INFO 2026-03-29 13:35:02,630 signals Registration email task queued for lucas.harris4445@tit.in
+INFO 2026-03-29 13:35:02,646 signals New student created: STU2026039 - gurpreet.singh4647@tit.in
+INFO 2026-03-29 13:35:02,681 signals Registration email task queued for gurpreet.singh4647@tit.in
+INFO 2026-03-29 13:35:02,698 signals New student created: STU2026040 - ava.lewis4849@tit.in
+INFO 2026-03-29 13:35:02,712 signals Registration email task queued for ava.lewis4849@tit.in
+INFO 2026-03-29 13:35:02,731 signals New student created: STU2026041 - kunal.arora5051@tit.in
+INFO 2026-03-29 13:35:02,731 signals Registration email task queued for kunal.arora5051@tit.in
+INFO 2026-03-29 13:35:02,750 signals New student created: STU2026042 - mia.clark5253@tit.in
+INFO 2026-03-29 13:35:02,765 signals Registration email task queued for mia.clark5253@tit.in
+INFO 2026-03-29 13:35:02,781 signals New student created: STU2026043 - siddharth.mishra5455@tit.in
+INFO 2026-03-29 13:35:02,793 signals Registration email task queued for siddharth.mishra5455@tit.in
+INFO 2026-03-29 13:35:02,814 signals New student created: STU2026044 - amelia.young5657@tit.in
+INFO 2026-03-29 13:35:02,821 signals Registration email task queued for amelia.young5657@tit.in
+INFO 2026-03-29 13:35:02,831 signals New student created: STU2026045 - dhruv.shah5859@tit.in
+INFO 2026-03-29 13:35:02,843 signals Registration email task queued for dhruv.shah5859@tit.in
+INFO 2026-03-29 13:35:02,849 signals New student created: STU2026046 - elijah.king6061@tit.in
+INFO 2026-03-29 13:35:02,866 signals Registration email task queued for elijah.king6061@tit.in
+INFO 2026-03-29 13:35:02,881 signals New student created: STU2026047 - sakshi.jain6263@tit.in
+INFO 2026-03-29 13:35:02,881 signals Registration email task queued for sakshi.jain6263@tit.in
+INFO 2026-03-29 13:35:02,915 signals New student created: STU2026048 - logan.scott6465@tit.in
+INFO 2026-03-29 13:35:02,922 signals Registration email task queued for logan.scott6465@tit.in
+INFO 2026-03-29 13:35:02,948 signals New student created: STU2026049 - pari.kaur6667@tit.in
+INFO 2026-03-29 13:35:02,958 signals Registration email task queued for pari.kaur6667@tit.in
+INFO 2026-03-29 13:35:02,965 signals New student created: STU2026050 - alexander.green6869@tit.in
+INFO 2026-03-29 13:35:02,979 signals Registration email task queued for alexander.green6869@tit.in
+INFO 2026-03-29 13:35:02,997 signals New student created: STU2026051 - nisha.varma7071@tit.in
+INFO 2026-03-29 13:35:03,009 signals Registration email task queued for nisha.varma7071@tit.in
+INFO 2026-03-29 13:35:03,015 signals New student created: STU2026052 - henry.baker7273@tit.in
+INFO 2026-03-29 13:35:03,032 signals Registration email task queued for henry.baker7273@tit.in
+INFO 2026-03-29 13:35:03,058 signals New student created: STU2026053 - aditya.pandey7475@tit.in
+INFO 2026-03-29 13:35:03,063 signals Registration email task queued for aditya.pandey7475@tit.in
+INFO 2026-03-29 13:35:03,081 signals New student created: STU2026054 - zoe.adams7677@tit.in
+INFO 2026-03-29 13:35:03,081 signals Registration email task queued for zoe.adams7677@tit.in
+INFO 2026-03-29 13:35:03,098 signals New student created: STU2026055 - reyansh.thakur7879@tit.in
+INFO 2026-03-29 13:35:03,111 signals Registration email task queued for reyansh.thakur7879@tit.in
+INFO 2026-03-29 13:35:03,116 signals New student created: STU2026056 - lily.nelson8081@tit.in
+INFO 2026-03-29 13:35:03,132 signals Registration email task queued for lily.nelson8081@tit.in
+INFO 2026-03-29 13:35:03,147 signals New student created: STU2026057 - varun.sethi8283@tit.in
+INFO 2026-03-29 13:35:03,153 signals Registration email task queued for varun.sethi8283@tit.in
+INFO 2026-03-29 13:35:03,166 signals New student created: STU2026058 - grace.hill8485@tit.in
+INFO 2026-03-29 13:35:03,166 signals Registration email task queued for grace.hill8485@tit.in
+INFO 2026-03-29 13:35:03,188 signals New student created: STU2026059 - karthik.rao8687@tit.in
+INFO 2026-03-29 13:35:03,188 signals Registration email task queued for karthik.rao8687@tit.in
+INFO 2026-03-29 13:35:03,199 signals New student created: STU2026060 - victoria.carter8889@tit.in
+INFO 2026-03-29 13:35:03,218 signals Registration email task queued for victoria.carter8889@tit.in
+INFO 2026-03-29 13:35:03,230 signals New student created: STU2026061 - ayesha.ansari9091@tit.in
+INFO 2026-03-29 13:35:03,230 signals Registration email task queued for ayesha.ansari9091@tit.in
+INFO 2026-03-29 13:35:03,249 signals New student created: STU2026062 - nathan.mitchell9293@tit.in
+INFO 2026-03-29 13:35:03,262 signals Registration email task queued for nathan.mitchell9293@tit.in
+INFO 2026-03-29 13:35:03,276 signals New student created: STU2026063 - simran.gill9495@tit.in
+INFO 2026-03-29 13:35:03,282 signals Registration email task queued for simran.gill9495@tit.in
+INFO 2026-03-29 13:35:03,298 signals New student created: STU2026064 - madison.perez9697@tit.in
+INFO 2026-03-29 13:35:03,310 signals Registration email task queued for madison.perez9697@tit.in
+INFO 2026-03-29 13:35:03,331 signals New student created: STU2026065 - ishaan.dubey9899@tit.in
+INFO 2026-03-29 13:35:03,335 signals Registration email task queued for ishaan.dubey9899@tit.in
+INFO 2026-03-29 13:35:03,348 signals New student created: STU2026066 - natalie.roberts1001@tit.in
+INFO 2026-03-29 13:35:03,348 signals Registration email task queued for natalie.roberts1001@tit.in
+INFO 2026-03-29 13:35:03,370 signals New student created: STU2026067 - krishna.iyer1023@tit.in
+INFO 2026-03-29 13:35:03,370 signals Registration email task queued for krishna.iyer1023@tit.in
+INFO 2026-03-29 13:35:03,381 signals New student created: STU2026068 - gabriel.ramirez1045@tit.in
+INFO 2026-03-29 13:35:03,393 signals Registration email task queued for gabriel.ramirez1045@tit.in
+INFO 2026-03-29 13:35:03,399 signals New student created: STU2026069 - sneha.bhat1067@tit.in
+INFO 2026-03-29 13:35:03,414 signals Registration email task queued for sneha.bhat1067@tit.in
+INFO 2026-03-29 13:35:03,431 signals New student created: STU2026070 - christian.torres1089@tit.in
+INFO 2026-03-29 13:35:03,431 signals Registration email task queued for christian.torres1089@tit.in
+INFO 2026-03-29 13:35:03,448 signals New student created: STU2026071 - zara.siddiqui1111@tit.in
+INFO 2026-03-29 13:35:03,469 signals Registration email task queued for zara.siddiqui1111@tit.in
+INFO 2026-03-29 13:35:03,500 signals New student created: STU2026072 - jack.edwards1133@tit.in
+INFO 2026-03-29 13:35:03,514 signals Registration email task queued for jack.edwards1133@tit.in
+INFO 2026-03-29 13:35:03,546 signals New student created: STU2026073 - rudra.gowda1155@tit.in
+INFO 2026-03-29 13:35:03,568 signals Registration email task queued for rudra.gowda1155@tit.in
+INFO 2026-03-29 13:35:03,596 signals New student created: STU2026074 - lillian.collins1177@tit.in
+INFO 2026-03-29 13:35:03,607 signals Registration email task queued for lillian.collins1177@tit.in
+INFO 2026-03-29 13:35:03,631 signals New student created: STU2026075 - shaurya.chopra1199@tit.in
+INFO 2026-03-29 13:35:03,638 signals Registration email task queued for shaurya.chopra1199@tit.in
+INFO 2026-03-29 13:35:03,654 signals New student created: STU2026076 - aria.flores1221@tit.in
+INFO 2026-03-29 13:35:03,664 signals Registration email task queued for aria.flores1221@tit.in
+INFO 2026-03-29 13:35:03,681 signals New student created: STU2026077 - rahul.bansal1243@tit.in
+INFO 2026-03-29 13:35:03,691 signals Registration email task queued for rahul.bansal1243@tit.in
+INFO 2026-03-29 13:35:03,701 signals New student created: STU2026078 - stella.stewart1265@tit.in
+INFO 2026-03-29 13:35:03,701 signals Registration email task queued for stella.stewart1265@tit.in
+INFO 2026-03-29 13:35:03,734 signals New student created: STU2026079 - amit.grover1287@tit.in
+INFO 2026-03-29 13:35:03,746 signals Registration email task queued for amit.grover1287@tit.in
+INFO 2026-03-29 13:35:03,769 signals New student created: STU2026080 - hannah.campbell1309@tit.in
+INFO 2026-03-29 13:35:03,769 signals Registration email task queued for hannah.campbell1309@tit.in
+INFO 2026-03-29 13:35:03,774 middleware POST /api/students/students/bulk_create/ - Status: 201 - Duration: 2.53s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:35:18,326 middleware GET /api/students/students/ - Status: 200 - Duration: 0.17s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:38:54,646 signals New student created: STU2026081 - aadhya.verma4581@tit.in
+INFO 2026-03-29 13:38:54,669 signals Registration email task queued for aadhya.verma4581@tit.in
+INFO 2026-03-29 13:38:54,695 signals New student created: STU2026082 - vihaan.reddy4582@tit.in
+INFO 2026-03-29 13:38:54,695 signals Registration email task queued for vihaan.reddy4582@tit.in
+INFO 2026-03-29 13:38:54,714 signals New student created: STU2026083 - anvi.kumar4583@tit.in
+INFO 2026-03-29 13:38:54,714 signals Registration email task queued for anvi.kumar4583@tit.in
+INFO 2026-03-29 13:38:54,732 signals New student created: STU2026084 - reyansh.singh4584@tit.in
+INFO 2026-03-29 13:38:54,736 signals Registration email task queued for reyansh.singh4584@tit.in
+INFO 2026-03-29 13:38:54,753 signals New student created: STU2026085 - saanvi.sharma4585@tit.in
+INFO 2026-03-29 13:38:54,753 signals Registration email task queued for saanvi.sharma4585@tit.in
+INFO 2026-03-29 13:38:54,771 signals New student created: STU2026086 - shaurya.patel4586@tit.in
+INFO 2026-03-29 13:38:54,779 signals Registration email task queued for shaurya.patel4586@tit.in
+INFO 2026-03-29 13:38:54,805 signals New student created: STU2026087 - myra.gupta4587@tit.in
+INFO 2026-03-29 13:38:54,811 signals Registration email task queued for myra.gupta4587@tit.in
+INFO 2026-03-29 13:38:54,822 signals New student created: STU2026088 - atharv.nair4588@tit.in
+INFO 2026-03-29 13:38:54,822 signals Registration email task queued for atharv.nair4588@tit.in
+INFO 2026-03-29 13:38:54,837 signals New student created: STU2026089 - ishita.joshi4589@tit.in
+INFO 2026-03-29 13:38:54,854 signals Registration email task queued for ishita.joshi4589@tit.in
+INFO 2026-03-29 13:38:54,870 signals New student created: STU2026090 - advik.khan4590@tit.in
+INFO 2026-03-29 13:38:54,870 signals Registration email task queued for advik.khan4590@tit.in
+INFO 2026-03-29 13:38:54,887 signals New student created: STU2026091 - navya.rao4591@tit.in
+INFO 2026-03-29 13:38:54,887 signals Registration email task queued for navya.rao4591@tit.in
+INFO 2026-03-29 13:38:54,904 signals New student created: STU2026092 - kabir.mehta4592@tit.in
+INFO 2026-03-29 13:38:54,904 signals Registration email task queued for kabir.mehta4592@tit.in
+INFO 2026-03-29 13:38:54,920 signals New student created: STU2026093 - prisha.agarwal4593@tit.in
+INFO 2026-03-29 13:38:54,920 signals Registration email task queued for prisha.agarwal4593@tit.in
+INFO 2026-03-29 13:38:54,953 signals New student created: STU2026094 - ishaan.malhotra4594@tit.in
+INFO 2026-03-29 13:38:54,954 signals Registration email task queued for ishaan.malhotra4594@tit.in
+INFO 2026-03-29 13:38:54,971 signals New student created: STU2026095 - kavya.kapoor4595@tit.in
+INFO 2026-03-29 13:38:54,971 signals Registration email task queued for kavya.kapoor4595@tit.in
+INFO 2026-03-29 13:38:55,003 signals New student created: STU2026096 - aryan.chopra4596@tit.in
+INFO 2026-03-29 13:38:55,007 signals Registration email task queued for aryan.chopra4596@tit.in
+INFO 2026-03-29 13:38:55,023 signals New student created: STU2026097 - shreya.khanna4597@tit.in
+INFO 2026-03-29 13:38:55,023 signals Registration email task queued for shreya.khanna4597@tit.in
+INFO 2026-03-29 13:38:55,053 signals New student created: STU2026098 - aditya.sethi4598@tit.in
+INFO 2026-03-29 13:38:55,057 signals Registration email task queued for aditya.sethi4598@tit.in
+INFO 2026-03-29 13:38:55,076 signals New student created: STU2026099 - sara.bansal4599@tit.in
+INFO 2026-03-29 13:38:55,076 signals Registration email task queued for sara.bansal4599@tit.in
+INFO 2026-03-29 13:38:55,088 signals New student created: STU2026100 - rudra.arora4600@tit.in
+INFO 2026-03-29 13:38:55,088 signals Registration email task queued for rudra.arora4600@tit.in
+INFO 2026-03-29 13:38:55,104 signals New student created: STU2026101 - anaya.goyal4601@tit.in
+INFO 2026-03-29 13:38:55,121 signals Registration email task queued for anaya.goyal4601@tit.in
+INFO 2026-03-29 13:38:55,137 signals New student created: STU2026102 - krishna.jain4602@tit.in
+INFO 2026-03-29 13:38:55,137 signals Registration email task queued for krishna.jain4602@tit.in
+INFO 2026-03-29 13:38:55,154 signals New student created: STU2026103 - aarohi.shah4603@tit.in
+INFO 2026-03-29 13:38:55,154 signals Registration email task queued for aarohi.shah4603@tit.in
+INFO 2026-03-29 13:38:55,170 signals New student created: STU2026104 - parth.desai4604@tit.in
+INFO 2026-03-29 13:38:55,186 signals Registration email task queued for parth.desai4604@tit.in
+INFO 2026-03-29 13:38:55,204 signals New student created: STU2026105 - tanvi.iyer4605@tit.in
+INFO 2026-03-29 13:38:55,220 signals Registration email task queued for tanvi.iyer4605@tit.in
+INFO 2026-03-29 13:38:55,239 signals New student created: STU2026106 - dhruv.menon4606@tit.in
+INFO 2026-03-29 13:38:55,254 signals Registration email task queued for dhruv.menon4606@tit.in
+INFO 2026-03-29 13:38:55,287 signals New student created: STU2026107 - riya.pillai4607@tit.in
+INFO 2026-03-29 13:38:55,287 signals Registration email task queued for riya.pillai4607@tit.in
+INFO 2026-03-29 13:38:55,304 signals New student created: STU2026108 - kiaan.nair4608@tit.in
+INFO 2026-03-29 13:38:55,320 signals Registration email task queued for kiaan.nair4608@tit.in
+INFO 2026-03-29 13:38:55,337 signals New student created: STU2026109 - divya.reddy4609@tit.in
+INFO 2026-03-29 13:38:55,337 signals Registration email task queued for divya.reddy4609@tit.in
+INFO 2026-03-29 13:38:55,354 signals New student created: STU2026110 - ayaan.patel4610@tit.in
+INFO 2026-03-29 13:38:55,371 signals Registration email task queued for ayaan.patel4610@tit.in
+INFO 2026-03-29 13:38:55,387 signals New student created: STU2026111 - pooja.sharma4611@tit.in
+INFO 2026-03-29 13:38:55,387 signals Registration email task queued for pooja.sharma4611@tit.in
+INFO 2026-03-29 13:38:55,404 signals New student created: STU2026112 - yash.verma4612@tit.in
+INFO 2026-03-29 13:38:55,404 signals Registration email task queued for yash.verma4612@tit.in
+INFO 2026-03-29 13:38:55,436 signals New student created: STU2026113 - sneha.singh4613@tit.in
+INFO 2026-03-29 13:38:55,437 signals Registration email task queued for sneha.singh4613@tit.in
+INFO 2026-03-29 13:38:55,454 signals New student created: STU2026114 - laksh.kumar4614@tit.in
+INFO 2026-03-29 13:38:55,473 signals Registration email task queued for laksh.kumar4614@tit.in
+INFO 2026-03-29 13:38:55,536 signals New student created: STU2026115 - nisha.gupta4615@tit.in
+INFO 2026-03-29 13:38:55,666 signals Registration email task queued for nisha.gupta4615@tit.in
+INFO 2026-03-29 13:38:55,697 signals New student created: STU2026116 - arjun.joshi4616@tit.in
+INFO 2026-03-29 13:38:55,709 signals Registration email task queued for arjun.joshi4616@tit.in
+INFO 2026-03-29 13:38:55,787 signals New student created: STU2026117 - meera.khan4617@tit.in
+INFO 2026-03-29 13:38:55,787 signals Registration email task queued for meera.khan4617@tit.in
+INFO 2026-03-29 13:38:55,820 signals New student created: STU2026118 - kunal.rao4618@tit.in
+INFO 2026-03-29 13:38:55,820 signals Registration email task queued for kunal.rao4618@tit.in
+INFO 2026-03-29 13:38:55,853 signals New student created: STU2026119 - anjali.mehta4619@tit.in
+INFO 2026-03-29 13:38:55,853 signals Registration email task queued for anjali.mehta4619@tit.in
+INFO 2026-03-29 13:38:55,870 signals New student created: STU2026120 - rohan.agarwal4620@tit.in
+INFO 2026-03-29 13:38:55,887 signals Registration email task queued for rohan.agarwal4620@tit.in
+INFO 2026-03-29 13:38:55,920 signals New student created: STU2026121 - simran.malhotra4621@tit.in
+INFO 2026-03-29 13:38:55,936 signals Registration email task queued for simran.malhotra4621@tit.in
+INFO 2026-03-29 13:38:55,953 signals New student created: STU2026122 - varun.kapoor4622@tit.in
+INFO 2026-03-29 13:38:55,971 signals Registration email task queued for varun.kapoor4622@tit.in
+INFO 2026-03-29 13:38:55,987 signals New student created: STU2026123 - kriti.chopra4623@tit.in
+INFO 2026-03-29 13:38:55,987 signals Registration email task queued for kriti.chopra4623@tit.in
+INFO 2026-03-29 13:38:56,003 signals New student created: STU2026124 - nikhil.khanna4624@tit.in
+INFO 2026-03-29 13:38:56,020 signals Registration email task queued for nikhil.khanna4624@tit.in
+INFO 2026-03-29 13:38:56,037 signals New student created: STU2026125 - sakshi.sethi4625@tit.in
+INFO 2026-03-29 13:38:56,037 signals Registration email task queued for sakshi.sethi4625@tit.in
+INFO 2026-03-29 13:38:56,054 signals New student created: STU2026126 - tarun.bansal4626@tit.in
+INFO 2026-03-29 13:38:56,054 signals Registration email task queued for tarun.bansal4626@tit.in
+INFO 2026-03-29 13:38:56,070 signals New student created: STU2026127 - shruti.arora4627@tit.in
+INFO 2026-03-29 13:38:56,087 signals Registration email task queued for shruti.arora4627@tit.in
+INFO 2026-03-29 13:38:56,103 signals New student created: STU2026128 - karan.goyal4628@tit.in
+INFO 2026-03-29 13:38:56,103 signals Registration email task queued for karan.goyal4628@tit.in
+INFO 2026-03-29 13:38:56,120 signals New student created: STU2026129 - nandini.jain4629@tit.in
+INFO 2026-03-29 13:38:56,137 signals Registration email task queued for nandini.jain4629@tit.in
+INFO 2026-03-29 13:38:56,154 signals New student created: STU2026130 - ankit.shah4630@tit.in
+INFO 2026-03-29 13:38:56,154 signals Registration email task queued for ankit.shah4630@tit.in
+INFO 2026-03-29 13:38:56,171 signals New student created: STU2026131 - swati.desai4631@tit.in
+INFO 2026-03-29 13:38:56,171 signals Registration email task queued for swati.desai4631@tit.in
+INFO 2026-03-29 13:38:56,187 signals New student created: STU2026132 - deepak.iyer4632@tit.in
+INFO 2026-03-29 13:38:56,187 signals Registration email task queued for deepak.iyer4632@tit.in
+INFO 2026-03-29 13:38:56,219 signals New student created: STU2026133 - ritu.menon4633@tit.in
+INFO 2026-03-29 13:38:56,221 signals Registration email task queued for ritu.menon4633@tit.in
+INFO 2026-03-29 13:38:56,237 signals New student created: STU2026134 - sanjay.pillai4634@tit.in
+INFO 2026-03-29 13:38:56,237 signals Registration email task queued for sanjay.pillai4634@tit.in
+INFO 2026-03-29 13:38:56,253 signals New student created: STU2026135 - geeta.nair4635@tit.in
+INFO 2026-03-29 13:38:56,253 signals Registration email task queued for geeta.nair4635@tit.in
+INFO 2026-03-29 13:38:56,270 signals New student created: STU2026136 - manoj.reddy4636@tit.in
+INFO 2026-03-29 13:38:56,287 signals Registration email task queued for manoj.reddy4636@tit.in
+INFO 2026-03-29 13:38:56,303 signals New student created: STU2026137 - sunita.patel4637@tit.in
+INFO 2026-03-29 13:38:56,303 signals Registration email task queued for sunita.patel4637@tit.in
+INFO 2026-03-29 13:38:56,320 signals New student created: STU2026138 - mohammed.ali4638@tit.in
+INFO 2026-03-29 13:38:56,338 signals Registration email task queued for mohammed.ali4638@tit.in
+INFO 2026-03-29 13:38:56,360 signals New student created: STU2026139 - ayesha.khan4639@tit.in
+INFO 2026-03-29 13:38:56,364 signals Registration email task queued for ayesha.khan4639@tit.in
+INFO 2026-03-29 13:38:56,377 signals New student created: STU2026140 - fatima.ansari4640@tit.in
+INFO 2026-03-29 13:38:56,388 signals Registration email task queued for fatima.ansari4640@tit.in
+INFO 2026-03-29 13:38:56,406 signals New student created: STU2026141 - zara.sheikh4641@tit.in
+INFO 2026-03-29 13:38:56,406 signals Registration email task queued for zara.sheikh4641@tit.in
+INFO 2026-03-29 13:38:56,428 signals New student created: STU2026142 - ibrahim.siddiqui4642@tit.in
+INFO 2026-03-29 13:38:56,436 signals Registration email task queued for ibrahim.siddiqui4642@tit.in
+INFO 2026-03-29 13:38:56,452 signals New student created: STU2026143 - mariam.hussain4643@tit.in
+INFO 2026-03-29 13:38:56,460 signals Registration email task queued for mariam.hussain4643@tit.in
+INFO 2026-03-29 13:38:56,477 signals New student created: STU2026144 - yusuf.ali4644@tit.in
+INFO 2026-03-29 13:38:56,485 signals Registration email task queued for yusuf.ali4644@tit.in
+INFO 2026-03-29 13:38:56,510 signals New student created: STU2026145 - amina.begum4645@tit.in
+INFO 2026-03-29 13:38:56,510 signals Registration email task queued for amina.begum4645@tit.in
+INFO 2026-03-29 13:38:56,536 signals New student created: STU2026146 - hamza.akhtar4646@tit.in
+INFO 2026-03-29 13:38:56,544 signals Registration email task queued for hamza.akhtar4646@tit.in
+INFO 2026-03-29 13:38:56,569 signals New student created: STU2026147 - sana.rizvi4647@tit.in
+INFO 2026-03-29 13:38:56,577 signals Registration email task queued for sana.rizvi4647@tit.in
+INFO 2026-03-29 13:38:56,596 signals New student created: STU2026148 - gurpreet.singh4648@tit.in
+INFO 2026-03-29 13:38:56,598 signals Registration email task queued for gurpreet.singh4648@tit.in
+INFO 2026-03-29 13:38:56,619 signals New student created: STU2026149 - harpreet.kaur4649@tit.in
+INFO 2026-03-29 13:38:56,619 signals Registration email task queued for harpreet.kaur4649@tit.in
+INFO 2026-03-29 13:38:56,644 signals New student created: STU2026150 - jaspreet.gill4650@tit.in
+INFO 2026-03-29 13:38:56,648 signals Registration email task queued for jaspreet.gill4650@tit.in
+INFO 2026-03-29 13:38:56,668 signals New student created: STU2026151 - manpreet.dhillon4651@tit.in
+INFO 2026-03-29 13:38:56,674 signals Registration email task queued for manpreet.dhillon4651@tit.in
+INFO 2026-03-29 13:38:56,707 signals New student created: STU2026152 - amandeep.sandhu4652@tit.in
+INFO 2026-03-29 13:38:56,731 signals Registration email task queued for amandeep.sandhu4652@tit.in
+INFO 2026-03-29 13:38:56,757 signals New student created: STU2026153 - navdeep.brar4653@tit.in
+INFO 2026-03-29 13:38:56,763 signals Registration email task queued for navdeep.brar4653@tit.in
+INFO 2026-03-29 13:38:56,783 signals New student created: STU2026154 - ranveer.sidhu4654@tit.in
+INFO 2026-03-29 13:38:56,791 signals Registration email task queued for ranveer.sidhu4654@tit.in
+INFO 2026-03-29 13:38:56,810 signals New student created: STU2026155 - aiden.chen4655@tit.in
+INFO 2026-03-29 13:38:56,810 signals Registration email task queued for aiden.chen4655@tit.in
+INFO 2026-03-29 13:38:56,834 signals New student created: STU2026156 - elara.wang4656@tit.in
+INFO 2026-03-29 13:38:56,834 signals Registration email task queued for elara.wang4656@tit.in
+INFO 2026-03-29 13:38:56,854 signals New student created: STU2026157 - finn.kim4657@tit.in
+INFO 2026-03-29 13:38:56,871 signals Registration email task queued for finn.kim4657@tit.in
+INFO 2026-03-29 13:38:56,889 signals New student created: STU2026158 - isla.park4658@tit.in
+INFO 2026-03-29 13:38:56,889 signals Registration email task queued for isla.park4658@tit.in
+INFO 2026-03-29 13:38:56,904 signals New student created: STU2026159 - kai.silva4659@tit.in
+INFO 2026-03-29 13:38:56,904 signals Registration email task queued for kai.silva4659@tit.in
+INFO 2026-03-29 13:38:56,936 signals New student created: STU2026160 - luna.santos4660@tit.in
+INFO 2026-03-29 13:38:56,936 signals Registration email task queued for luna.santos4660@tit.in
+INFO 2026-03-29 13:38:56,957 signals New student created: STU2026161 - milo.costa4661@tit.in
+INFO 2026-03-29 13:38:56,971 signals Registration email task queued for milo.costa4661@tit.in
+INFO 2026-03-29 13:38:56,987 signals New student created: STU2026162 - nova.muller4662@tit.in
+INFO 2026-03-29 13:38:56,987 signals Registration email task queued for nova.muller4662@tit.in
+INFO 2026-03-29 13:38:57,004 signals New student created: STU2026163 - orion.schmidt4663@tit.in
+INFO 2026-03-29 13:38:57,022 signals Registration email task queued for orion.schmidt4663@tit.in
+INFO 2026-03-29 13:38:57,022 signals New student created: STU2026164 - quinn.fischer4664@tit.in
+INFO 2026-03-29 13:38:57,037 signals Registration email task queued for quinn.fischer4664@tit.in
+INFO 2026-03-29 13:38:57,037 signals New student created: STU2026165 - rowan.rossi4665@tit.in
+INFO 2026-03-29 13:38:57,053 signals Registration email task queued for rowan.rossi4665@tit.in
+INFO 2026-03-29 13:38:57,069 signals New student created: STU2026166 - sage.russo4666@tit.in
+INFO 2026-03-29 13:38:57,069 signals Registration email task queued for sage.russo4666@tit.in
+INFO 2026-03-29 13:38:57,084 signals New student created: STU2026167 - theo.ferrari4667@tit.in
+INFO 2026-03-29 13:38:57,084 signals Registration email task queued for theo.ferrari4667@tit.in
+INFO 2026-03-29 13:38:57,100 signals New student created: STU2026168 - uma.esposito4668@tit.in
+INFO 2026-03-29 13:38:57,119 signals Registration email task queued for uma.esposito4668@tit.in
+INFO 2026-03-29 13:38:57,147 signals New student created: STU2026169 - wren.nowak4669@tit.in
+INFO 2026-03-29 13:38:57,147 signals Registration email task queued for wren.nowak4669@tit.in
+INFO 2026-03-29 13:38:57,175 signals New student created: STU2026170 - zayn.kowalski4670@tit.in
+INFO 2026-03-29 13:38:57,191 signals Registration email task queued for zayn.kowalski4670@tit.in
+INFO 2026-03-29 13:38:57,222 signals New student created: STU2026171 - blake.novak4671@tit.in
+INFO 2026-03-29 13:38:57,222 signals Registration email task queued for blake.novak4671@tit.in
+INFO 2026-03-29 13:38:57,238 signals New student created: STU2026172 - casey.horvath4672@tit.in
+INFO 2026-03-29 13:38:57,253 signals Registration email task queued for casey.horvath4672@tit.in
+INFO 2026-03-29 13:38:57,269 signals New student created: STU2026173 - dakota.banerjee4673@tit.in
+INFO 2026-03-29 13:38:57,269 signals Registration email task queued for dakota.banerjee4673@tit.in
+INFO 2026-03-29 13:38:57,284 signals New student created: STU2026174 - eli.chatterjee4674@tit.in
+INFO 2026-03-29 13:38:57,284 signals Registration email task queued for eli.chatterjee4674@tit.in
+INFO 2026-03-29 13:38:57,300 signals New student created: STU2026175 - frankie.mukherjee4675@tit.in
+INFO 2026-03-29 13:38:57,316 signals Registration email task queued for frankie.mukherjee4675@tit.in
+INFO 2026-03-29 13:38:57,331 signals New student created: STU2026176 - greyson.das4676@tit.in
+INFO 2026-03-29 13:38:57,331 signals Registration email task queued for greyson.das4676@tit.in
+INFO 2026-03-29 13:38:57,363 signals New student created: STU2026177 - aarav.ghosh4677@tit.in
+INFO 2026-03-29 13:38:57,363 signals Registration email task queued for aarav.ghosh4677@tit.in
+INFO 2026-03-29 13:38:57,394 signals New student created: STU2026178 - diya.roy4678@tit.in
+INFO 2026-03-29 13:38:57,394 signals Registration email task queued for diya.roy4678@tit.in
+INFO 2026-03-29 13:38:57,425 signals New student created: STU2026179 - vihaan.chakraborty4679@tit.in
+INFO 2026-03-29 13:38:57,425 signals Registration email task queued for vihaan.chakraborty4679@tit.in
+INFO 2026-03-29 13:38:57,441 signals New student created: STU2026180 - ananya.bose4680@tit.in
+INFO 2026-03-29 13:38:57,441 signals Registration email task queued for ananya.bose4680@tit.in
+INFO 2026-03-29 13:38:57,441 middleware POST /api/students/students/bulk_create/ - Status: 201 - Duration: 2.95s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:03,362 middleware GET /admin/students/course/ - Status: 200 - Duration: 0.20s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:03,502 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:05,820 middleware GET /admin/students/student/ - Status: 200 - Duration: 0.36s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:05,961 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.08s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:33,426 middleware GET /admin/students/student/103/change/ - Status: 200 - Duration: 0.21s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:33,611 middleware GET /admin/jsi18n/ - Status: 200 - Duration: 0.09s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:51,172 middleware GET /admin/students/student/103/history/ - Status: 200 - Duration: 0.15s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:39:55,137 middleware GET /admin/students/student/103/change/ - Status: 200 - Duration: 0.18s - User: alberttyagi123@gmail.com
+INFO 2026-03-29 13:40:25,529 middleware GET / - Status: 200 - Duration: 0.00s - User: alberttyagi123@gmail.com
